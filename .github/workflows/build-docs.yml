@@ -31,5 +31,5 @@ jobs:
         with:
           name: docs
           path: |
-            artifacts/${{ env.ARTIFACT }}
+            ${{ env.ARTIFACT }}
           retention-days: 7
