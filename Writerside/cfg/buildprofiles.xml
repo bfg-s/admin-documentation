@@ -2,7 +2,9 @@
 <buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <variables></variables>
+    <variables>
+        <search-endpoint>http://127.0.0.1:8080</search-endpoint>
+    </variables>
     <build-profile instance="bfg-admin-documentation">
         <variables>
             <offline-docs>true</offline-docs>
