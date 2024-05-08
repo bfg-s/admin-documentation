@@ -31,8 +31,8 @@ jobs:
         with:
           name: docs
           path: |
-            ${{ env.ARTIFACT }}
-            report.json
+            artifacts/${{ env.ARTIFACT }}
+            artifacts/report.json
           retention-days: 7
   test:
     needs: build
