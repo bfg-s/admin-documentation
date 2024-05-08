@@ -6,8 +6,8 @@ To effectively organize the navigation menu of the extension and gain control ov
 <?php
 namespace App\Admin;
 
-use LteAdmin\Core\NavigatorExtensionProvider;
-use LteAdmin\Interfaces\ActionWorkExtensionInterface;
+use Admin\Core\NavigatorExtensionProvider;
+use Admin\Interfaces\ActionWorkExtensionInterface;
 
 class Navigator extends NavigatorExtensionProvider implements ActionWorkExtensionInterface
 {
