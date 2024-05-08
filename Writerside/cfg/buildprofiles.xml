@@ -5,7 +5,7 @@
     <variables>
         <algolia-id>T64PM7Z8BS</algolia-id>
         <algolia-index>Bfg_admin_documentation</algolia-index>
-        <algolia-api-key>32ca3f737bf81cf32169adf4d262d72d</algolia-api-key>
+        <algolia-api-key>bc8c90cefdf255c3ad740852ff723725</algolia-api-key>
         <web-root>https://some.domain</web-root>
     </variables>
     <build-profile instance="bfg-admin-documentation">
