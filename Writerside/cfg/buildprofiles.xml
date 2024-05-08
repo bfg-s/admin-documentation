@@ -3,10 +3,7 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <variables>
-        <algolia-id>T64PM7Z8BS</algolia-id>
-        <algolia-index>Bfg_admin_documentation</algolia-index>
-        <algolia-api-key>bc8c90cefdf255c3ad740852ff723725</algolia-api-key>
-        <web-root>https://some.domain</web-root>
+
     </variables>
     <build-profile instance="bfg-admin-documentation">
         <variables>
