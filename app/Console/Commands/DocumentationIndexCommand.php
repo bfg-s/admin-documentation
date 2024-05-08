@@ -39,6 +39,7 @@ class DocumentationIndexCommand extends Command
                 $content = implode("\n", array_slice($content, 1));
 
                 $index[] = [
+                    'html' => strtolower(Str::slug(pathinfo($file, PATHINFO_FILENAME))) . '.html',
                     'name' => pathinfo($file, PATHINFO_BASENAME),
                     'title' => $header,
                     'content_html' => Str::markdown($content),
