@@ -9,7 +9,7 @@ env:
   INSTANCE: 'Writerside/bfg-admin-documentation'
   ARTIFACT: 'webHelpBFG-ADMIN-DOCUMENTATION2-all.zip'
   DOCKER_VERSION: '241.15989'
-  ALGOLIA_ARTIFACT: 'algolia-indexes-HI.zip'
+  ALGOLIA_ARTIFACT: 'algolia-indexes-BFG-ADMIN-DOCUMENTATION.zip'
   ALGOLIA_APP_NAME: 'T64PM7Z8BS'
   ALGOLIA_INDEX_NAME: 'Bfg_admin_documentation'
   ALGOLIA_KEY: '${{ secrets.ALGOLIA_KEY }}'
