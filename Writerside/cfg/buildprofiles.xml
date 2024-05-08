@@ -9,6 +9,10 @@
         <variables>
             <offline-docs>true</offline-docs>
             <noindex-content>false</noindex-content>
+            <algolia-id>T64PM7Z8BS</algolia-id>
+            <algolia-index>Bfg_admin_documentation</algolia-index>
+            <algolia-api-key>22824cbb26056b57be8aeb7f8469ea1e</algolia-api-key>
+            <web-root>https://some.domain</web-root>
         </variables>
     </build-profile>
 
