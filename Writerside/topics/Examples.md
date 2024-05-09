@@ -1,7 +1,8 @@
 # Examples
 
-Conventionally, we have a “Shop” model with user information about their store. Below is an example of using most of the components in the controller.
+In this section I show different controllers that give an example of what your controller might look like.
 
+### Example 1
 ```php
 class ShopController extends Controller
 {
@@ -181,5 +182,259 @@ class ShopController extends Controller
 			)
 		);
 	}
+}
+```
+
+### Example 2
+```php
+class AddressesController extends Controller
+{
+    /**
+     * Static variable Model
+     * @var string
+     */
+    static $model = Address::class;
+
+    /**
+     * @param Page $page
+     * @param Card $card
+     * @param SearchForm $searchForm
+     * @param ModelTable $modelTable
+     * @return Page
+     */
+    public function index(Page $page, Card $card, SearchForm $searchForm, ModelTable $modelTable) : Page
+    {
+        return $page->card(
+            $card->search_form(
+                $searchForm->id(),
+                $searchForm->input('city', 'admin-shopify.city'),
+                $searchForm->input('postcode', 'admin-shopify.postcode'),
+                $searchForm->input('address_line1', 'admin-shopify.address_line1'),
+                $searchForm->input('address_line2', 'admin-shopify.address_line2'),
+                $searchForm->input('phone', 'admin-shopify.phone'),
+                $searchForm->input('email', 'admin-shopify.email')->icon_envelope(),
+                $searchForm->input('latitude', 'admin-shopify.latitude'),
+                $searchForm->input('longitude', 'admin-shopify.longitude'),
+                $searchForm->input('addressed_id', 'admin-shopify.addressed_id'),
+                $searchForm->input('addressed_type', 'admin-shopify.addressed_type'),
+                $searchForm->at(),
+            ),
+            $card->sortedModelTable(
+                $modelTable->col('admin-shopify.city', 'city')->sort()->copied,
+                $modelTable->col('admin-shopify.postcode', 'postcode')->sort()->copied,
+                $modelTable->col('admin-shopify.address_line1', 'address_line1')->sort()->copied,
+                $modelTable->col('admin-shopify.phone', 'phone')->sort()->copied,
+                $modelTable->col('admin-shopify.email', 'email')->sort()->copied,
+                $modelTable->col('admin-shopify.latitude_longitude', function (Address $address) {
+                    return $address->latitude . ', ' . $address->longitude;
+                })->sort()->copied,
+                $modelTable->col('admin-shopify.active', 'active')->sort()->input_switcher,
+            ),
+        );
+    }
+
+    /**
+     * @param Page $page
+     * @param Card $card
+     * @param Form $form
+     * @param Tab $tab
+     * @return Page
+     */
+    public function matrix(Page $page, Card $card, Form $form, Tab $tab) : Page
+    {
+        return $page->card(
+            $card->form(
+                $form->tabGeneral(
+                  $tab->input('city', 'admin-shopify.city'),
+                  $tab->input('postcode', 'admin-shopify.postcode'),
+                  $tab->input('address_line1', 'admin-shopify.address_line1'),
+                  $tab->input('address_line2', 'admin-shopify.address_line2')->nullable(),
+                  $tab->input('phone', 'admin-shopify.phone')->nullable(),
+                  $tab->email('email', 'admin-shopify.email')->nullable(),
+                  $tab->input('latitude', 'admin-shopify.latitude')->nullable(),
+                  $tab->input('longitude', 'admin-shopify.longitude')->nullable(),
+                  $tab->input('order', 'admin-shopify.order')->default(0),
+                  $tab->switcher('active', 'admin-shopify.active')->default(1),
+                ),
+            ),
+            $card->footer_form(),
+        );
+    }
+
+    /**
+     * @param Page $page
+     * @param Card $card
+     * @param ModelInfoTable $modelInfoTable
+     * @return Page
+     */
+    public function show(Page $page, Card $card, ModelInfoTable $modelInfoTable) : Page
+    {
+        return $page->card(
+            $card->model_info_table(
+                $modelInfoTable->id(),
+                $modelInfoTable->row('admin-shopify.city', 'city'),
+                $modelInfoTable->row('admin-shopify.postcode', 'postcode'),
+                $modelInfoTable->row('admin-shopify.address_line1', 'address_line1'),
+                $modelInfoTable->row('admin-shopify.address_line2', 'address_line2'),
+                $modelInfoTable->row('admin-shopify.phone', 'phone'),
+                $modelInfoTable->row('admin-shopify.email', 'email'),
+                $modelInfoTable->row('admin-shopify.latitude', 'latitude'),
+                $modelInfoTable->row('admin-shopify.longitude', 'longitude'),
+                $modelInfoTable->row('admin-shopify.addressed_id', 'addressed_id'),
+                $modelInfoTable->row('admin-shopify.addressed_type', 'addressed_type'),
+                $modelInfoTable->row('admin-shopify.order', 'order'),
+                $modelInfoTable->row('admin-shopify.active', 'active'),
+                $modelInfoTable->at(),
+            ),
+        );
+    }
+}
+```
+
+### Example 3
+```php
+class ProductsController extends Controller
+{
+    /**
+     * Static variable Model
+     * @var string
+     */
+    static $model = Product::class;
+
+    /**
+     * @param Page $page
+     * @param Card $card
+     * @param SearchForm $searchForm
+     * @param ModelTable $modelTable
+     * @return Page
+     */
+    public function index(Page $page, Card $card, SearchForm $searchForm, ModelTable $modelTable) : Page
+    {
+        return $page->card(
+            $card->search_form(
+                $searchForm->id(),
+                $searchForm->input('name', 'admin-shopify.name'),
+                $searchForm->input('description', 'admin-shopify.description'),
+                $searchForm->input('short_description', 'admin-shopify.short_description'),
+                $searchForm->input('rating', 'admin-shopify.rating'),
+                $searchForm->input('views', 'admin-shopify.views'),
+                $searchForm->at(),
+            ),
+            $card->statisticBody(
+                $modelTable->col('admin-shopify.image', function (Product $product) {
+                    return $product->images()->first()?->photo ?: '/vendor/admin-shopify/product-photo-no-available.png';
+                })->avatar,
+                $modelTable->col('admin-shopify.name', 'name')->sort(),
+                $modelTable->col('admin-shopify.rating', 'rating')->rating_stars()->sort(),
+                $modelTable->col('admin-shopify.views', 'views')->badge->sort(),
+                $modelTable->col('admin-shopify.new', 'new')->input_switcher->sort(),
+                $modelTable->col('admin-shopify.best_selling', 'best_selling')->input_switcher->sort(),
+                $modelTable->col('admin-shopify.active', 'active')->input_switcher->sort(),
+            ),
+        );
+    }
+
+    /**
+     * @param  Page  $page
+     * @param  Card  $card
+     * @param  Form  $form
+     * @param  Tab  $tab
+     * @param  ModelRelation  $modelRelation
+     * @return Page
+     */
+    public function matrix(Page $page, Card $card, Form $form, Tab $tab, ModelRelation $modelRelation) : Page
+    {
+        return $page->card(
+            $card->form(
+                $form->tabGeneral(
+                    $tab->select('shop_id', 'admin-shopify.shop')
+                        ->load(Shop::class),
+                    $tab->lang()->input('name', 'admin-shopify.name')
+                      ->required()
+                      ->duplication_how_slug('#input_seo_slug')
+                      ->duplication('#input_seo_title')
+                      ->vertical(),
+                    $tab->lang()->ckeditor('description', 'admin-shopify.description')->vertical(),
+                    $tab->lang()->ckeditor('short_description', 'admin-shopify.short_description')->vertical(),
+                    $tab->numeric('rating', 'admin-shopify.rating')->max(5)->default(0),
+                    $tab->numeric('views', 'admin-shopify.views')->default(0),
+                    $tab->switcher('new', 'admin-shopify.new')->default(0),
+                    $tab->switcher('best_selling', 'admin-shopify.best_selling')->default(0),
+                    $tab->switcher('active', 'admin-shopify.active')->default(1),
+                ),
+                $form->tab(
+                    $tab->title('admin-shopify.categories')->icon_globe_europe(),
+                    $tab->multi_select('categories[]', 'admin-shopify.categories')
+                        ->load(ProductCategory::class),
+                    $tab->live(
+                        $tab->withCollection($this->modelInput('categories', []), function (ProductCategory|int $categoryId) use ($tab) {
+                            $category = $categoryId instanceof ProductCategory
+                                ? $categoryId
+                                : ProductCategory::find($categoryId);
+                            return [
+                                $tab->divider($category->name),
+                                $tab->withCollection($category->properties, function (ProductCategoryProperty $property) use ($tab) {
+                                    return [
+                                        $tab->multi_select("categoryPropertyValues[$property->id][]", $property->name)
+                                            ->vertical()
+                                            ->value_to(
+                                                fn () => $this->model()->categoryPropertyValues()->where('category_property_id', $property->id)->get()
+                                            )
+                                            ->load($property->propertyValues(), '{id}) {value}'),
+                                    ];
+                                }),
+                            ];
+                        }),
+                    ),
+                ),
+                $form->tab(
+                    $tab->title('admin-shopify.prices')->icon_money_bill(),
+                    $tab->model_relation('prices')->title('admin-shopify.prices')->template(
+                        $modelRelation->numeric('availability', 'admin-shopify.count')
+                            ->default(-1)
+                            ->info('admin-shopify.set_-1_if_the_quantity_is_not_limited'),
+                        $modelRelation->select_currency_id('admin-shopify.currency')->load(Currency::class),
+                        $modelRelation->amount_price('admin-shopify.price')->required()->default('0'),
+                        $modelRelation->amount_discount_price('admin-shopify.discount_price')->required()->default('0'),
+                        $modelRelation->percent_discount_percent('admin-shopify.discount_percent')->required()->default('0'),
+                        $modelRelation->fullControl(),
+                    )
+                ),
+                $form->tab(
+                    $tab->title('admin-shopify.images')->icon_images(),
+                    $tab->model_relation('images')->ordered()->title('admin-shopify.images')->template(
+                        $modelRelation->image_photo('admin-shopify.photo'),
+                        $modelRelation->fullControl(),
+                    )
+                ),
+                $form->tabSeo()
+            ),
+            $card->footer_form(),
+        );
+    }
+
+    /**
+     * @param Page $page
+     * @param Card $card
+     * @param ModelInfoTable $modelInfoTable
+     * @return Page
+     */
+    public function show(Page $page, Card $card, ModelInfoTable $modelInfoTable) : Page
+    {
+        return $page->card(
+            $card->model_info_table(
+                $modelInfoTable->id(),
+                $modelInfoTable->row('admin-shopify.name', 'name'),
+                $modelInfoTable->row('admin-shopify.description', 'description'),
+                $modelInfoTable->row('admin-shopify.short_description', 'short_description'),
+                $modelInfoTable->row('admin-shopify.rating', 'rating'),
+                $modelInfoTable->row('admin-shopify.views', 'views'),
+                $modelInfoTable->row('admin-shopify.new', 'new'),
+                $modelInfoTable->row('admin-shopify.best_selling', 'best_selling'),
+                $modelInfoTable->row('admin-shopify.active', 'active'),
+                $modelInfoTable->at(),
+            ),
+        );
+    }
 }
 ```

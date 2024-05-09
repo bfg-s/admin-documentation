@@ -3,15 +3,47 @@
 Controlled windows that load independently of the main page content, such as Bootstrap modal windows, are encapsulated within the delegator class `\App\Admin\Delegates\Modal`. This makes them a distinct component designed for creating interactive, dialog-based interfaces within the admin panel.
 
 ```php
+use Admin\Page;
+use Admin\Respond;
+use Admin\Delegates\Card;
 use Admin\Delegates\Modal;
+use App\Admin\Controllers\Controller;
 
-$page->modal(
-	$modal->title('Hello!'),
-	...
-)
+class ShopController extends Controller
+{
+	public function sayHelloEvent(Respond $respond): void
+	{
+		$respond->toast_success(
+			'Hello ' . $this->modelInput('name', 'Guest')
+		);
+	}
+
+    public function index(
+		Page $page,
+		Modal $modal,
+		Card $card,
+	): Page {
+		return $page
+			->modal(
+			    $modal->name('say_hello'), // required modal name
+				$modal->title('Say hello modal')->sizeExtra(),
+				$modal->submitEvent([$this, 'sayHelloEvent']),
+				$modal->form(
+					$form->input_name()->queryable(),
+				),
+				$modal->buttons()->success()->icon_save()->title('Send')->modalSubmit(),
+			)
+			->card(
+			    $card->buttons(
+					$buttons->dark()->title('Open modal')->icon_user()
+						->modal('say_hello'), // Show by modal name
+				),
+				...
+			);
+	}
+}
 ```
 Modal windows, by default, are assigned names automatically, with the initial window being labeled as `modal`, followed by `modal-1` for the second, and so forth. It is through these designated names that modal windows are referenced and invoked. Importantly, the modal window's content is not loaded along with the page; instead, the data for the modal is rendered exclusively upon request to display the window. Additionally, there is the flexibility to assign custom names to these modal windows. Moreover, modal windows accommodate various supplementary configuration options, enhancing their functionality and adaptability within the user interface.
-
 
 ### name
 Assign a custom name to the modal window, allowing for personalized identification and access within the application's interface.
@@ -76,47 +108,3 @@ $page->modal(
 )
 ```
 Components that can be used directly (without a body) since their behavior is described by default: `buttons`, `form`, `model_table`, `model_info_table`, `table`, `nested`, `card`, `search_form`, `chart_js`, `model_relation`, `row`, `column`.
-
-### Example
-
-```php
-use Admin\Page;
-use Admin\Respond;
-use Admin\Delegates\Card;
-use Admin\Delegates\Modal;
-use App\Admin\Controllers\Controller;
-
-class ShopController extends Controller
-{
-	public function sayHelloEvent(Respond $respond): void
-	{
-		$respond->toast_success(
-			'Hello ' . $this->modelInput('name', 'Guest')
-		);
-	}
-
-    public function index(
-		Page $page,
-		Modal $modal,
-		Card $card,
-	): Page {
-		return $page
-			->modal(
-			    $modal->name('say_hello'), // required modal name
-				$modal->title('Say hello modal')->sizeExtra(),
-				$modal->submitEvent([$this, 'sayHelloEvent']),
-				$modal->form(
-					$form->input_name()->queryable(),
-				),
-				$modal->buttons()->success()->icon_save()->title('Send')->modalSubmit(),
-			)
-			->card(
-			    $card->buttons(
-					$buttons->dark()->title('Open modal')->icon_user()
-						->modal('say_hello'), // Show by modal name
-				),
-				...
-			);
-	}
-}
-```

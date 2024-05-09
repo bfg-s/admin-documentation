@@ -73,6 +73,7 @@
         <toc-element topic="Simple-table.md"/>
         <toc-element topic="Sortable-timeline-table.md"/>
     </toc-element>
+    <toc-element topic="Respond.md"/>
     <toc-element topic="Extending.md">
         <toc-element topic="Component-extending.md"/>
         <toc-element topic="Register-new-form-component.md"/>
