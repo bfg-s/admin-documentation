@@ -1,4 +1,4 @@
-# Graphics
+# ChartJs
 
 The component for drawing charts from the model is a separate component delegated by the class `\Admin\Delegates\ChartJs`.
 This component provides functionality to generate charts based on data from the model.
