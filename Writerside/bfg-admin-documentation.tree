@@ -84,6 +84,6 @@
     <toc-element topic="Examples.md"/>
     <toc-element topic="Implementations.md"/>
     <toc-element topic="Admin-extensions.md"/>
-    <toc-element topic="Tests.md"/>
     <toc-element topic="Change-logs.md"/>
+    <toc-element topic="Tests.md"/>
 </instance-profile>
