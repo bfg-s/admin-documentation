@@ -1,8 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Web Archive (bfg-admin-documentation)" type="StardustRunConfiguration" factoryName="save-as-zip" editBeforeRun="true" focusToolWindowBeforeRun="true">
-    <option name="folderPath" value="$PROJECT_DIR$" />
-    <option name="instanceId" value="bfg-admin-documentation" />
-    <option name="instanceName" value="BFG Admin Documentation" />
-    <method v="2" />
-  </configuration>
-</component>

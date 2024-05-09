@@ -21,7 +21,7 @@ class DashboardController extends Controller
         return $page->row(
             $row->column(8)->row(
                 $row->column(12)->card(
-                    $card->title(__('admin.user_statistics')),
+                    $card->title('User statistics'),
                     $card->card_body(
                         $cardBody->chart_js(
                             $chartJs->model(config('auth.providers.users.model'))
@@ -30,7 +30,7 @@ class DashboardController extends Controller
                                         ->default(implode(' - ', $this->defaultDateRange()))
                                 )
                                 ->size(300)
-                                ->loadModelBy(title: __('admin.added_to_users')),
+                                ->loadModelBy(title: 'Added to users'),
                         )
                     )
                 ),
@@ -38,7 +38,7 @@ class DashboardController extends Controller
             $row->column(4)->row(
                 $row->addClass('h-100'),
                 $row->column(12, $column->addClass('d-flex'))->card(
-                    $card->title(__('admin.administrators_browser_statistic')),
+                    $card->title('Administrators browser statistic'),
                     $card->card_body(
                         $cardBody->chart_js(
                             $chartJs->size(300)->typeDoughnut(),
@@ -46,7 +46,7 @@ class DashboardController extends Controller
                                 $adminLogs = Admin\Models\AdminBrowser::all(['name'])->groupBy('name')->map(
                                     fn(Collection $collection) => $collection->count()
                                 );
-                                $component->customChart(__('admin.browser'), [$adminLogs->toArray()], $adminLogs->map(
+                                $component->customChart('Browser', [$adminLogs->toArray()], $adminLogs->map(
                                     fn() => $component->randColor()
                                 )->values()->toArray());
                             }),
@@ -54,7 +54,7 @@ class DashboardController extends Controller
                     ),
                 ),
                 $row->column(12, $column->addClass('d-flex'))->card(
-                    $card->title(__('admin.activity')),
+                    $card->title('Activity'),
                     $card->card_body(
                         $cardBody->chart_js(
                             $chartJs->size(300)->typeDoughnut(),
@@ -64,7 +64,7 @@ class DashboardController extends Controller
                                 )->groupBy('name')->map(
                                     fn(Collection $collection) => $collection->count()
                                 );
-                                $component->customChart(__('admin.menu_action'), [$adminLogs->toArray()],
+                                $component->customChart('Action', [$adminLogs->toArray()],
                                     $adminLogs->map(
                                         fn() => $component->randColor()
                                     )->values()->toArray());
