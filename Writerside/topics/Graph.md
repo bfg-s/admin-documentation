@@ -1,7 +1,9 @@
-# Graph
+# Graphics
 
 The component for drawing charts from the model is a separate component delegated by the class `\Admin\Delegates\ChartJs`.
 This component provides functionality to generate charts based on data from the model.
+
+This chart, under the hood, uses Chart.js, which allows you to create different types of charts, such as line, column, pie and others.
 
 An example of how graphics are integrated into the admin dashboard:
 ```php
@@ -87,7 +89,7 @@ class DashboardController extends Controller
 }
 ```
 
-## Add simple graph
+## Add simple graphic
 ```php
 use App\Admin\Delegates\ChartJs;
 
@@ -103,7 +105,7 @@ return $page->card(
 )
 ```
 
-## Use custom graph data
+## Use custom graphic data
 To generate a chart using Chart.js and custom chart data, you can utilize the ChartJs component and provide your own data. Here's an example of how you can do it:
 ```php
 return $page->card(
