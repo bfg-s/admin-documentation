@@ -1,6 +1,6 @@
 # Tests
 
-Для запуска тестов необходимо выполнить добавление в ваш основной файл `phpunit.xml` директории `vendor/bfg/admin/tests/Unit` и `vendor/bfg/admin/tests/Feature`:
+To run the tests, you need to add the `vendor/bfg/admin/tests/Unit` and `vendor/bfg/admin/tests/Feature` directories to your main `phpunit.xml` file:
 ```xml
 ...
     <testsuites>
@@ -19,7 +19,7 @@
     </testsuites>
 ...
 ```
-После того как вы добавили директории в файл `phpunit.xml`, вы можете запустить тесты с помощью команды:
+Once you have added the directories to the `phpunit.xml` file, you can run the tests using the command:
 ```bash
 ./vendor/bin/phpunit
 ```
