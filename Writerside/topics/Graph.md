@@ -80,7 +80,7 @@ class DashboardController extends Controller
 
 ## Add simple graphic
 ```php
-use App\Admin\Delegates\ChartJs;
+use Admin\Delegates\ChartJs;
 
 return $page->card(
 	$card->title('Registrations per month'),
@@ -97,6 +97,8 @@ return $page->card(
 ## Use custom graphic data
 To generate a chart using Chart.js and custom chart data, you can utilize the ChartJs component and provide your own data. Here's an example of how you can do it:
 ```php
+use Admin\Delegates\ChartJs;
+
 return $page->card(
 	$card->title('Registrations per month'),
 	$card->chart_js(
@@ -114,9 +116,25 @@ return $page->card(
 )
 ```
 
+## Model loader
+To generate a chart using Chart.js and data from a model, you can use the `loadModelBy` method provided by the `ChartJsComponent` class. Here's an example of how you can do it:
+```php
+use Admin\Delegates\ChartJs;
+
+return $page->card(
+    $card->title('Registrations'),
+    $card->chart_js(
+        $chartJs->model(User::class),
+        $chartJs->loadModelBy(by: 'created_at', title: 'Created'),
+    )
+)
+```
+
 ## Load data after load page (Lazy loading)
 To implement lazy loading of chart data after the page loads, you can use the load method provided by the `ChartJsComponent` class. Here's how you can do it:
 ```php
+use Admin\Delegates\ChartJs;
+
 return $page->card(
 	$card->title('Registrations per month'),
 	$card->chart_js(
