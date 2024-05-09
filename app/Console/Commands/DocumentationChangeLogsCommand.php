@@ -29,8 +29,6 @@ class DocumentationChangeLogsCommand extends Command
 
         $changelog = file_get_contents(base_path('/vendor/bfg/admin/CHANGELOG.md'));
 
-        $changelog = "# Change logs \n\n" . $changelog;
-
         file_put_contents(base_path('/Writerside/topics/Change-logs.md'), $changelog);
 
         $this->info('Change logs copied successfully.');
