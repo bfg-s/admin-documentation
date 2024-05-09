@@ -43,21 +43,13 @@ class DocumentationIndexCommand extends Command
                     'name' => pathinfo($file, PATHINFO_BASENAME),
                     'title' => $header,
                     'content_html' => Str::markdown($content),
-                    'content_md' => $content,
                 ];
             }
         }
 
         file_put_contents(base_path('Writerside/index.json'), json_encode($index, JSON_PRETTY_PRINT));
-        $this->info('Indexing completed.');
 
-//        $this->info('Indexing completed.');
-//        $this->info('Parsing the documentation files...');
-//
-//        $result = $this->parseTreeToArray(
-//            file_get_contents(base_path('Writerside/bfg-admin-documentation.tree'))
-//        );
-//        dd($result);
+        $this->info('Indexing completed.');
     }
 
     function parseTreeToArray($xml)

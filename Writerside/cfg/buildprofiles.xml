@@ -3,7 +3,7 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <variables>
-        <search-endpoint>https://bfg-admin-6-2.dev/q.php</search-endpoint>
+        <search-endpoint>https://wood.veskod.com/q.php</search-endpoint>
     </variables>
     <build-profile instance="bfg-admin-documentation">
         <variables>
