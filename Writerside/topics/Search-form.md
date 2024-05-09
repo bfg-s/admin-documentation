@@ -1,6 +1,6 @@
 # Search form
 
-This is a form containing inputs with the signature of the search query string. Additionally, it generates custom build options. It's a separate component of the delegate class `\App\Admin\Delegates\SearchForm`. The delegate also includes assistants like `inDefault` for building ready-made tables.
+This is a form containing inputs with the signature of the search query string. Additionally, it generates custom build options. It's a separate component of the delegate class `\Admin\Delegates\SearchForm`. The delegate also includes assistants like `inDefault` for building ready-made tables.
 ```php
 use App\Admin\Delegates\SearchForm;
 

@@ -1,6 +1,6 @@
 # Model table
 
-The table is generated based on the model that you passed to it. It paginates, sorts, and creates a table based on your rules. This component is a separate delegate class `\App\Admin\Delegates\ModelTable`. Additionally, it offers helpers such as `colDefault` for constructing pre-defined tables.
+The table is generated based on the model that you passed to it. It paginates, sorts, and creates a table based on your rules. This component is a separate delegate class `\Admin\Delegates\ModelTable`. Additionally, it offers helpers such as `colDefault` for constructing pre-defined tables.
 ```php
 use App\Admin\Delegates\ModelTable;
 

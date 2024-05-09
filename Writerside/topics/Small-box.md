@@ -1,6 +1,6 @@
 # Small box
 
-Is a separate component of the deligator class `\App\Admin\Delegates\SmallBox`. To create a widget suitable for displaying statistics data, such as the number of users, using the `SmallBox` component, you can follow this example:
+Is a separate component of the deligator class `\Admin\Delegates\SmallBox`. To create a widget suitable for displaying statistics data, such as the number of users, using the `SmallBox` component, you can follow this example:
 ```php
 use App\Admin\Delegates\SmallBox;
 

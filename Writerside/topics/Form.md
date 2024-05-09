@@ -1,6 +1,6 @@
 # Form
 
-The data entry form accommodates a diverse array of input fields. It constitutes a distinct component within the delegate class `\App\Admin\Delegates\Form`. Moreover, the delegate offers supplementary aids such as `tabGeneral` to facilitate the construction of pre-configured tables.
+The data entry form accommodates a diverse array of input fields. It constitutes a distinct component within the delegate class `\Admin\Delegates\Form`. Moreover, the delegate offers supplementary aids such as `tabGeneral` to facilitate the construction of pre-configured tables.
 
 ```php
 use App\Admin\Delegates\Card;

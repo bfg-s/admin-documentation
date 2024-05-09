@@ -1,6 +1,6 @@
 # Sortable timeline table
 
-Is a separate component of the deligator class `\App\Admin\Delegates\Timeline`. To create a timeline table with fully customizable content using the `Timeline` component, you can use the following example:
+Is a separate component of the deligator class `\Admin\Delegates\Timeline`. To create a timeline table with fully customizable content using the `Timeline` component, you can use the following example:
 ```php
 use App\Admin\Delegates\Timeline;
 

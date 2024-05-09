@@ -1,6 +1,6 @@
 # Nested and sortable
 
-The "Drag and Drop Table" component is designed to facilitate the sorting of sequences or the organization of nested models through an intuitive drag-and-drop interface. This feature is a standalone component within the delegator class `\App\Admin\Delegates\Nested`, offering a seamless and user-friendly method for managing data hierarchies and orderings directly from the UI.
+The "Drag and Drop Table" component is designed to facilitate the sorting of sequences or the organization of nested models through an intuitive drag-and-drop interface. This feature is a standalone component within the delegator class `\Admin\Delegates\Nested`, offering a seamless and user-friendly method for managing data hierarchies and orderings directly from the UI.
 ```php
 use App\Admin\Delegates\Nested;
 

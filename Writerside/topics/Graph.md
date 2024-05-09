@@ -1,9 +1,93 @@
 # Graph
 
-The component for drawing charts from the model is a separate component delegated by the class `\App\Admin\Delegates\ChartJs`.
+The component for drawing charts from the model is a separate component delegated by the class `\Admin\Delegates\ChartJs`.
 This component provides functionality to generate charts based on data from the model.
 
-## Make simple chart
+An example of how graphics are integrated into the admin dashboard:
+```php
+class DashboardController extends Controller
+{
+    /**
+     * @param  Page  $page
+     * @param  Card  $card
+     * @param  CardBody  $cardBody
+     * @param  StatisticPeriod  $statisticPeriod
+     * @param  ChartJs  $chartJs
+     * @param  SearchForm  $searchForm
+     * @param  Row  $row
+     * @param  Column  $column
+     * @return Page|mixed
+     */
+    public function index(
+        Page $page,
+        Card $card,
+        CardBody $cardBody,
+        ChartJs $chartJs,
+        SearchForm $searchForm,
+        Row $row,
+        Column $column,
+    ): mixed {
+        return $page->row(
+            $row->column(8)->row(
+                $row->column(12)->card(
+                    $card->title(__('admin.user_statistics')),
+                    $card->card_body(
+                        $cardBody->chart_js(
+                            $chartJs->model(config('auth.providers.users.model'))
+                                ->hasSearch(
+                                    $searchForm->date_range('created_at', 'admin.created_at')
+                                        ->default(implode(' - ', $this->defaultDateRange()))
+                                )
+                                ->size(300)
+                                ->loadModelBy(title: __('admin.added_to_users')),
+                        )
+                    )
+                ),
+            ),
+            $row->column(4)->row(
+                $row->addClass('h-100'),
+                $row->column(12, $column->addClass('d-flex'))->card(
+                    $card->title(__('admin.administrators_browser_statistic')),
+                    $card->card_body(
+                        $cardBody->chart_js(
+                            $chartJs->size(300)->typeDoughnut(),
+                            $chartJs->load(function (Admin\Components\ChartJsComponent $component) {
+                                $adminLogs = Admin\Models\AdminBrowser::all(['name'])->groupBy('name')->map(
+                                    fn(Collection $collection) => $collection->count()
+                                );
+                                $component->customChart(__('admin.browser'), [$adminLogs->toArray()], $adminLogs->map(
+                                    fn() => $component->randColor()
+                                )->values()->toArray());
+                            }),
+                        )
+                    ),
+                ),
+                $row->column(12, $column->addClass('d-flex'))->card(
+                    $card->title(__('admin.activity')),
+                    $card->card_body(
+                        $cardBody->chart_js(
+                            $chartJs->size(300)->typeDoughnut(),
+                            $chartJs->load(function (Admin\Components\ChartJsComponent $component) {
+                                $adminLogs = admin()->logs()->where('title', '!=', 'Loaded page')->get(['title'])->map(
+                                    fn(Admin\Models\AdminLog $log) => ['name' => $log->title]
+                                )->groupBy('name')->map(
+                                    fn(Collection $collection) => $collection->count()
+                                );
+                                $component->customChart(__('admin.menu_action'), [$adminLogs->toArray()],
+                                    $adminLogs->map(
+                                        fn() => $component->randColor()
+                                    )->values()->toArray());
+                            }),
+                        )
+                    ),
+                ),
+            )
+        );
+    }
+}
+```
+
+## Add simple chart
 ```php
 use App\Admin\Delegates\ChartJs;
 

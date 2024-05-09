@@ -1,6 +1,6 @@
 # Simple table
 
-Is a separate component of the deligator class `\App\Admin\Delegates\Table`. To create a table with arbitrary columns and rows using the `Table` component, you can follow either of these examples:
+Is a separate component of the deligator class `\Admin\Delegates\Table`. To create a table with arbitrary columns and rows using the `Table` component, you can follow either of these examples:
 ```php
 return $page->card(
 	$card->table(

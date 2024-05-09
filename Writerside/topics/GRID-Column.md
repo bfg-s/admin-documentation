@@ -1,6 +1,6 @@
 # GRID Column
 
-The Bootstrap Grid column serves as a tool for organizing components on an admin panel page, acting as a distinct component within the delegator class `\App\Admin\Delegates\Column`. This functionality enables the structured and aesthetically pleasing arrangement of various elements across the administrative interface.
+The Bootstrap Grid column serves as a tool for organizing components on an admin panel page, acting as a distinct component within the delegator class `\Admin\Delegates\Column`. This functionality enables the structured and aesthetically pleasing arrangement of various elements across the administrative interface.
 ```php
 use Admin\Delegates\Column;
 

@@ -1,6 +1,6 @@
 # Modal window
 
-Controlled windows that load independently of the main page content, such as Bootstrap modal windows, are encapsulated within the delegator class `\App\Admin\Delegates\Modal`. This makes them a distinct component designed for creating interactive, dialog-based interfaces within the admin panel.
+Controlled windows that load independently of the main page content, such as Bootstrap modal windows, are encapsulated within the delegator class `\Admin\Delegates\Modal`. This makes them a distinct component designed for creating interactive, dialog-based interfaces within the admin panel.
 
 ```php
 use Admin\Page;

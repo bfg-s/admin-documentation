@@ -1,6 +1,6 @@
 # Period statistics
 
-Is a separate component of the deligator class `\App\Admin\Delegates\StatisticPeriod`. To create an informative component for displaying statistical data based on the `created_at` field using the `StatisticPeriod` component, you can follow this example:
+Is a separate component of the deligator class `\Admin\Delegates\StatisticPeriod`. To create an informative component for displaying statistical data based on the `created_at` field using the `StatisticPeriod` component, you can follow this example:
 ```php
 use App\Admin\Delegates\StatisticPeriod;
 

@@ -1,6 +1,6 @@
 # Buttons
 
-The "Group of Buttons" component is a comprehensive collection that encapsulates all possible interactive scenarios within an admin panel page, serving as an essential tool for administrators to manage and interact with the content effectively. This component is a distinct element of the delegator class `\App\Admin\Delegates\Buttons`, which is specifically designed to streamline and facilitate various administrative actions through a well-organized interface.
+The "Group of Buttons" component is a comprehensive collection that encapsulates all possible interactive scenarios within an admin panel page, serving as an essential tool for administrators to manage and interact with the content effectively. This component is a distinct element of the delegator class `\Admin\Delegates\Buttons`, which is specifically designed to streamline and facilitate various administrative actions through a well-organized interface.
 ```php
 use App\Admin\Delegates\Buttons;
 

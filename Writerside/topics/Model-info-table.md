@@ -1,6 +1,6 @@
 # Model info table
 
-The table component, which allows for the manual assembly of rows from a specified model, serves as an independent component within the delegator class `\App\Admin\Delegates\ModelInfoTable`. This delegation mechanism also incorporates helper methods, such as `rowDefault`, to facilitate the construction of ready-made tables.
+The table component, which allows for the manual assembly of rows from a specified model, serves as an independent component within the delegator class `\Admin\Delegates\ModelInfoTable`. This delegation mechanism also incorporates helper methods, such as `rowDefault`, to facilitate the construction of ready-made tables.
 ```php
 return $page->card(
 	$card->model_info_table(

@@ -1,6 +1,6 @@
 # Card
 
-The card is utilized to arrange components. It is a distinct component of the delegate class `\App\Admin\Delegates\Card`. Additionally, the delegation offers assistants such as `statisticBody`, `sortedModelTable`, and `nestedModelTable` for constructing pre-built tables.
+The card is utilized to arrange components. It is a distinct component of the delegate class `\Admin\Delegates\Card`. Additionally, the delegation offers assistants such as `statisticBody`, `sortedModelTable`, and `nestedModelTable` for constructing pre-built tables.
 ```php
 use App\Admin\Delegates\Card;
 
