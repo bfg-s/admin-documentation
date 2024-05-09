@@ -351,7 +351,7 @@
         "html": "screenshots.html",
         "name": "Screenshots.md",
         "title": "Screenshots",
-        "content_html": "<h3>Administrations<\/h3>\n<p><img src=\"image_0.png\" alt=\"image_0.png\" \/><\/p>\n<h3>Administration edit<\/h3>\n<p><img src=\"image_1.png\" alt=\"image_1.png\" \/><\/p>\n<h3>Roles<\/h3>\n<p><img src=\"image_2.png\" alt=\"image_2.png\" \/><\/p>\n<h3>Permissions<\/h3>\n<p><img src=\"image_3.png\" alt=\"image_3.png\" \/><\/p>\n<h3>User panel, activity per day<\/h3>\n<p><img src=\"image_4.png\" alt=\"image_4.png\" \/><\/p>\n"
+        "content_html": "<h3>Administrations<\/h3>\n<p><img src=\"image_0.png\" alt=\"image_0.png\" \/><\/p>\n<h3>Administration edit<\/h3>\n<p><img src=\"image_1.png\" alt=\"image_1.png\" \/><\/p>\n<h3>Roles<\/h3>\n<p><img src=\"image_2.png\" alt=\"image_2.png\" \/><\/p>\n<h3>Permissions<\/h3>\n<p><img src=\"image_3.png\" alt=\"image_3.png\" \/><\/p>\n<h3>User panel, 2fa secure<\/h3>\n<p><img src=\"image_4.png\" alt=\"image_4.png\" \/><\/p>\n"
     },
     {
         "html": "search-form.html",

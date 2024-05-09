@@ -12,5 +12,5 @@
 ### Permissions
 ![image_3.png](image_3.png)
 
-### User panel, activity per day
+### User panel, 2fa secure
 ![image_4.png](image_4.png)
