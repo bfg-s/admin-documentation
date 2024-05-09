@@ -11,10 +11,10 @@
         <testsuite name="Feature">
             <directory>tests/Feature</directory>
         </testsuite>
-        <testsuite name="Unit">
+        <testsuite name="Bfg Admin Unit">
             <directory>vendor/bfg/admin/tests/Unit</directory>
         </testsuite>
-        <testsuite name="Feature">
+        <testsuite name="Bfg Admin Feature">
             <directory>vendor/bfg/admin/tests/Feature</directory>
         </testsuite>
     </testsuites>
