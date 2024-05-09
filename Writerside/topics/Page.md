@@ -5,6 +5,8 @@ The mentioned special class pertains to a distinct segment of the admin panel, f
 By convention, a page object should be accepted as an input within the controller and subsequently passed on from the controller, but only after it has been fully populated with the necessary data. This process ensures that the controller effectively manages and transfers a complete and ready-to-use page object to its intended destination within the application.
 
 ```php
+use Admin\Page;
+...
 public function index(
 	Page $page,
 ): Page {

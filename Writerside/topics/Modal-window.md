@@ -3,7 +3,7 @@
 Controlled windows that load independently of the main page content, such as Bootstrap modal windows, are encapsulated within the delegator class `\App\Admin\Delegates\Modal`. This makes them a distinct component designed for creating interactive, dialog-based interfaces within the admin panel.
 
 ```php
-use App\Admin\Delegates\Modal;
+use Admin\Delegates\Modal;
 
 $page->modal(
 	$modal->title('Hello!'),
@@ -76,3 +76,47 @@ $page->modal(
 )
 ```
 Components that can be used directly (without a body) since their behavior is described by default: `buttons`, `form`, `model_table`, `model_info_table`, `table`, `nested`, `card`, `search_form`, `chart_js`, `model_relation`, `row`, `column`.
+
+### Example
+
+```php
+use Admin\Page;
+use Admin\Respond;
+use Admin\Delegates\Card;
+use Admin\Delegates\Modal;
+use App\Admin\Controllers\Controller;
+
+class ShopController extends Controller
+{
+	public function sayHelloEvent(Respond $respond): void
+	{
+		$respond->toast_success(
+			'Hello ' . $this->modelInput('name', 'Guest')
+		);
+	}
+
+    public function index(
+		Page $page,
+		Modal $modal,
+		Card $card,
+	): Page {
+		return $page
+			->modal(
+			    $modal->name('say_hello'), // required modal name
+				$modal->title('Say hello modal')->sizeExtra(),
+				$modal->submitEvent([$this, 'sayHelloEvent']),
+				$modal->form(
+					$form->input_name()->queryable(),
+				),
+				$modal->buttons()->success()->icon_save()->title('Send')->modalSubmit(),
+			)
+			->card(
+			    $card->buttons(
+					$buttons->dark()->title('Open modal')->icon_user()
+						->modal('say_hello'), // Show by modal name
+				),
+				...
+			);
+	}
+}
+```
