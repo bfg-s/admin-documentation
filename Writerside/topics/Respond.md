@@ -78,10 +78,10 @@ $respond->put(string $command)
 ## Create custom command 
 ```javascript
 window.libs['custom_command'] = function (data) {
-    console.log(data); // {data: 'value'}
+    console.log(data); // dataValue1
 };
 ```
 And call it in the callback:
 ```php
-$respond->put('custom_command', ['data' => 'value']);
+$respond->put('custom_command', ['dataValue1']);
 ```
