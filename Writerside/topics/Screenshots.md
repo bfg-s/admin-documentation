@@ -1,7 +1,7 @@
 # Screenshots
 
 ### Administrations
-![image.png](image.png)
+![image_0.png](image_0.png)
 
 ### Administration edit
 ![image_1.png](image_1.png)
