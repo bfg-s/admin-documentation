@@ -87,7 +87,7 @@ class DashboardController extends Controller
 }
 ```
 
-## Add simple chart
+## Add simple graph
 ```php
 use App\Admin\Delegates\ChartJs;
 
@@ -103,7 +103,7 @@ return $page->card(
 )
 ```
 
-## Use custom chart data
+## Use custom graph data
 To generate a chart using Chart.js and custom chart data, you can utilize the ChartJs component and provide your own data. Here's an example of how you can do it:
 ```php
 return $page->card(
