@@ -9,17 +9,6 @@ An example of how graphics are integrated into the admin dashboard:
 ```php
 class DashboardController extends Controller
 {
-    /**
-     * @param  Page  $page
-     * @param  Card  $card
-     * @param  CardBody  $cardBody
-     * @param  StatisticPeriod  $statisticPeriod
-     * @param  ChartJs  $chartJs
-     * @param  SearchForm  $searchForm
-     * @param  Row  $row
-     * @param  Column  $column
-     * @return Page|mixed
-     */
     public function index(
         Page $page,
         Card $card,
