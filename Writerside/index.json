@@ -141,7 +141,7 @@
         "html": "extending.html",
         "name": "Extending.md",
         "title": "Extending",
-        "content_html": "<p>Start typing here...<\/p>\n"
+        "content_html": "<p>To create your own extension, you need to run the following command:<\/p>\n<pre><code class=\"language-Bash\">php artisan admin:extension vendor\/package-name --make\n<\/code><\/pre>\n<p>Answer the questions and the extension will be created in the <code>app\/Admin\/Extensions\/vendor\/package<\/code> folder.<\/p>\n<p>Then describe the extension configuration files in the <code>app\/Admin\/Extensions\/vendor\/package\/src\/Extension<\/code> folder.<\/p>\n<p>Then install the extension using the command:<\/p>\n<pre><code class=\"language-Bash\">php artisan admin:extension vendor\/package-name --install\n<\/code><\/pre>\n<p>The admin panel extension is registered in the file <code>app\/Admin\/Extensions\/vendor\/package\/src\/Extension\/Config.php<\/code> in the <code>boot<\/code> method.\nThis method is called when loading an extension into the admin panel or when loading console applications.<\/p>\n"
     },
     {
         "html": "file.html",
