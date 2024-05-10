@@ -181,4 +181,6 @@ $form->input(...)->slugable()
 - is_max(int $max)
 - is_min(int $min)
 
+{columns="2"}
+
 Supports all `Laravel` validation methods. The available list of validation methods can be seen in [file at link](https://github.com/bfg-s/admin/blob/master/src/Traits/RulesBackTrait.php).

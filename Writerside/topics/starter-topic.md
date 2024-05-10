@@ -8,6 +8,8 @@
 
 Bfg Admin offers an efficient and user-friendly package for Laravel applications, streamlining the creation of an admin panel with comprehensive functionalities. It is designed to facilitate the rapid integration of CRUD operations (Create, Read, Update, Delete) for your models, alongside advanced features such as customizable filters, search capabilities, and data sorting options.
 
+<video src="https://www.youtube.com/watch?v=2HjjJsHDKTg" />
+
 ## Key Features
 
 ### Flexible Configuration

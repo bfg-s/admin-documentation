@@ -32,3 +32,31 @@ public function index(
     );
 }
 ```
+
+Used same modifiers as in [Model table](Model-table.md#column-modifiers).
+
+
+### avatarField
+This method is used to add an avatar to the card component.
+```php
+$modelCards->avatarField(string $field): static
+```
+
+### titleField
+This method is used to add a title to the card component.
+```php
+$modelCards->titleField(string $field): static
+```
+
+### subtitleField
+This method is used to add a subtitle to the card component.
+```php
+$modelCards->subtitleField(string $field): static
+```
+
+### row
+The method utilized for constructing a table row is designed with flexibility in mind, accommodating both modifiers and columns within a "Sortable table".
+```php
+$modelCards->row(string $label, string|Closure|array $field): static
+```
+

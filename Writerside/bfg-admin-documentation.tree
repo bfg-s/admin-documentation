@@ -24,6 +24,7 @@
         <toc-element topic="Search-form.md"/>
         <toc-element topic="Model-table.md"/>
         <toc-element topic="Model-cards.md"/>
+        <toc-element topic="Model-info-table.md"/>
         <toc-element topic="Form.md">
             <toc-element topic="Amount.md"/>
             <toc-element topic="Autocomplete.md"/>
@@ -61,7 +62,6 @@
             <toc-element topic="Model-relation.md"/>
             <toc-element topic="Multilanguage.md"/>
         </toc-element>
-        <toc-element topic="Model-info-table.md"/>
         <toc-element topic="Nested-and-sortable.md"/>
         <toc-element topic="Interactive-elements.md"/>
         <toc-element topic="Tabs.md"/>

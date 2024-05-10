@@ -45,6 +45,8 @@ When a property or method starts with `in_[input method]_*`, a magical addition 
 - **checks** - Fields with checkboxes. Default type: `in`.
 - **radios** - Fields with radio buttons. Default type: `=`.
 
+{columns="2"}
+
 ### Comparison Types
 
 - `=` - Equal to input value
@@ -62,6 +64,8 @@ When a property or method starts with `in_[input method]_*`, a magical addition 
 - `not_in` - Search must not contain any of the options
 - `between` - The search must be between the input value
 - `not_between` - The search must not be between the input value
+
+{columns="2"}
 
 ### Custom comparison
 You can define your own input behavior by passing a Closure instead of the comparison type:

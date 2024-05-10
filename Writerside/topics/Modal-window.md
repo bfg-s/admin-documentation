@@ -43,6 +43,8 @@ class ShopController extends Controller
 	}
 }
 ```
+{collapsible="true" collapsed-title="ShopController.php"}
+
 Modal windows, by default, are assigned names automatically, with the initial window being labeled as `modal`, followed by `modal-1` for the second, and so forth. It is through these designated names that modal windows are referenced and invoked. Importantly, the modal window's content is not loaded along with the page; instead, the data for the modal is rendered exclusively upon request to display the window. Additionally, there is the flexibility to assign custom names to these modal windows. Moreover, modal windows accommodate various supplementary configuration options, enhancing their functionality and adaptability within the user interface.
 
 ### name

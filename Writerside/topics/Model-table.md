@@ -226,6 +226,8 @@ Table columns support special modifiers for more convenient display.
 - `input_select(string $class, string $format = 'id:name', $where = null)` - Makes an loaded select.
 - `input_radios(array $options, bool $first_default = false)` - Makes an simple radios.
 
+{columns="2"}
+
 ### Modificators
 
 - `rating_stars()` - Generates rating stars.
@@ -268,11 +270,15 @@ Table columns support special modifiers for more convenient display.
 - `beautiful_date_time` - Beautiful date and time string
 - `progress_complete(string $word = 'Complete'|false)` - Derive progress bar from value
 
+{columns="2"}
+
 ## Import to spreadsheets (.excel or .csv)
 Table description rules for the possibility of exporting this data to an `Excel` or `CSV` table.
 
 - `to_export(callable $callback = null)` - Take a column to generate in the document.
 - `only_export(callable $callback = null)` - Take column only for document generation.
+  
+{columns="2"}
 > If a column is hidden, it will also not participate in the generation.
 
 ## Control

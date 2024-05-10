@@ -24,6 +24,8 @@ In the system, there's a special feature designed to streamline the process of w
 
 For instance, when you utilize a method prefixed with `row_`, you gain the capability to define a label for that row directly through the method call. Specifically, if you have a method named row_name, you can set its label by calling `->row_name('Name of row')`. In this scenario, 'Name of row' becomes a user-friendly label associated with that particular row. This approach facilitates a more intuitive and customizable way to manage and display information within the system, allowing for a clearer presentation and easier understanding of data.
 
+Used same modifiers as in [Model table](Model-table.md#column-modifiers).
+
 ### Methods
 
 #### row
