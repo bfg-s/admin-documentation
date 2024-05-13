@@ -1,5 +1,7 @@
 # Tips
 
+Here are various tips and tricks for using the admin panel. These tips may be useful when developing a project.
+
 ## Laravel 11 support
 By default in Laravel 11 the session driver is `database`.
 This driver is not compatible with the admin panel, so it must be replaced with `file` or `redis`.
