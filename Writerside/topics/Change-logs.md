@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [6.2.3](https://github.com/bfg-s/admin/compare/6.2.2...6.2.3) - 2024-05-09
+## [6.2.3](https://github.com/bfg-s/admin/compare/6.2.2...6.2.3) - 2024-05-13
 
 * Fixed bug in call backs.
 * Fixed extension create, setup extension with "dev-main"
