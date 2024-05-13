@@ -14,7 +14,7 @@ In order to fix this you need to publish panel styles and scripts to your projec
 ```Bash
 php artisan vendor:publish --tag=admin-assets
 ```
-Typically this data is published during the installation of the admin panel.
+Typically this data is published during the [installation of the admin panel](Install.md#step-3-install-bfg-admin).
 
 ## New controller
 When you create a new controller using the `php artisan admin:controller` command, use the `--model` flag to specify the model that will be used in the controller, this will automatically create the controller fields from the list of model fields, namely from `fillable`.
