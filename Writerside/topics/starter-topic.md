@@ -10,6 +10,8 @@ Bfg Admin offers an efficient and user-friendly package for Laravel applications
 
 <video src="https://www.youtube.com/watch?v=2HjjJsHDKTg" />
 
+If you want, you can [buy me a coffee](https://buymeacoffee.com/gmsswxsave3)
+
 ## Key Features
 
 ### Flexible Configuration
