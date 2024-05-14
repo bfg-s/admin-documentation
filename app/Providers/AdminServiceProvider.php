@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Admin\Core\ConfigExtensionProvider;
 use App\Admin\Config;
 use App\Admin\Navigator;
 use Admin\ApplicationServiceProvider;
@@ -14,14 +15,16 @@ class AdminServiceProvider extends ApplicationServiceProvider
 {
     /**
      * Protected variable Navigator
+     *
      * @var string
      */
-    protected $navigator = Navigator::class;
+    protected string $navigator = Navigator::class;
 
     /**
      * Protected variable Config
-     * @var string
+     *
+     * @var string|ConfigExtensionProvider
      */
-    protected $config = Config::class;
+    protected string|ConfigExtensionProvider $config = Config::class;
 
 }

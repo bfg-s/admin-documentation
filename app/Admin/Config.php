@@ -14,10 +14,8 @@ class Config extends ApplicationConfig
 {
     /**
      * @return void
-     * @throws ContainerExceptionInterface
-     * @throws NotFoundExceptionInterface
      */
-    public function boot()
+    public function boot(): void
     {
         parent::boot();
     }
