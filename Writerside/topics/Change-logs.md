@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [6.3.0](https://github.com/bfg-s/admin/compare/6.2.3...6.3.0) - 2024-05-13
+* Added realtime for components (in future)
+* Added types for all properties and methods.
+* Added commentaries for all properties, methods and classes.
+* Changed installation command for generate classes with types and commentaries.
+* Removed unused files.
+
+
 ## [6.2.3](https://github.com/bfg-s/admin/compare/6.2.2...6.2.3) - 2024-05-13
 
 * Fixed bug in call backs.

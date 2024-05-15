@@ -5,7 +5,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 10.48.4.
+ * Generated for Laravel 10.48.10.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -8874,6 +8874,17 @@ namespace Illuminate\Support\Facades {
                         return $instance->hasSent($notifiable, $notification);
         }
                     /**
+         * Specify if notification should be serialized and restored when being "pushed" to the queue.
+         *
+         * @param bool $serializeAndRestore
+         * @return \Illuminate\Support\Testing\Fakes\NotificationFake 
+         * @static 
+         */        public static function serializeAndRestore($serializeAndRestore = true)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\NotificationFake $instance */
+                        return $instance->serializeAndRestore($serializeAndRestore);
+        }
+                    /**
          * Get the notifications that have been sent.
          *
          * @return array 
@@ -17187,7 +17198,7 @@ namespace Admin\Facades {
      * @mixin Admin
      */        class AdminFacade {
                     /**
-         * Add theme using the "register" method in your service provider.
+         * Method for adding a theme to the admin panel.
          *
          * @param string $class
          * @return void 
@@ -17198,7 +17209,7 @@ namespace Admin\Facades {
                         $instance->addTheme($class);
         }
                     /**
-         * 
+         * Method for getting the admin panel theme.
          *
          * @return \Admin\Themes\Theme|null 
          * @static 
@@ -17208,7 +17219,7 @@ namespace Admin\Facades {
                         return $instance->getTheme();
         }
                     /**
-         * 
+         * Method for getting a list of admin panel topics.
          *
          * @return \Admin\Themes\Theme[]|string[] 
          * @static 
@@ -17218,7 +17229,7 @@ namespace Admin\Facades {
                         return $instance->getThemes();
         }
                     /**
-         * 
+         * Method for getting the current user of the admin panel.
          *
          * @return \Admin\Models\AdminUser|\App\Models\User|\Admin|null 
          * @static 
@@ -17228,7 +17239,7 @@ namespace Admin\Facades {
                         return $instance->user();
         }
                     /**
-         * 
+         * Method for checking a guest.
          *
          * @return bool 
          * @static 
@@ -17238,7 +17249,7 @@ namespace Admin\Facades {
                         return $instance->guest();
         }
                     /**
-         * 
+         * Method for getting the admin panel version.
          *
          * @return string 
          * @static 
@@ -17248,7 +17259,7 @@ namespace Admin\Facades {
                         return $instance->version();
         }
                     /**
-         * 
+         * Method for registering an admin panel extension (Used under the hood of the extension provider).
          *
          * @param \Admin\ExtendProvider $provider
          * @return bool 
@@ -17259,10 +17270,10 @@ namespace Admin\Facades {
                         return $instance->registerExtension($provider);
         }
                     /**
-         * 
+         * Method for getting the installed admin panel extension.
          *
          * @param string $name
-         * @return bool|\Admin\ExtendProvider 
+         * @return \Admin\ExtendProvider|bool 
          * @static 
          */        public static function extension($name)
         {
@@ -17270,7 +17281,7 @@ namespace Admin\Facades {
                         return $instance->extension($name);
         }
                     /**
-         * 
+         * Method for getting a list of installed admin panel extensions.
          *
          * @return \Admin\ExtendProvider[] 
          * @static 
@@ -17280,7 +17291,7 @@ namespace Admin\Facades {
                         return $instance->extensions();
         }
                     /**
-         * 
+         * Method for getting installed or not installed admin panel extension.
          *
          * @param string $name
          * @return \Admin\ExtendProvider|null 
@@ -17291,7 +17302,7 @@ namespace Admin\Facades {
                         return $instance->getExtension($name);
         }
                     /**
-         * 
+         * Method for obtaining a list of admin panel extension providers.
          *
          * @return string[] 
          * @static 
@@ -17301,11 +17312,9 @@ namespace Admin\Facades {
                         return $instance->extensionProviders();
         }
                     /**
-         * Get request lang.
+         * Method for getting the current language of the admin panel.
          *
-         * @return array|string|null 
-         * @throws ContainerExceptionInterface
-         * @throws NotFoundExceptionInterface
+         * @return string|null 
          * @static 
          */        public static function nowLang()
         {
@@ -17318,7 +17327,7 @@ namespace Admin\Facades {
      *
      */        class NavigateFacade {
                     /**
-         * 
+         * Execute a callback on the current navigation instance.
          *
          * @param \Closure|array $calls
          * @return \Admin\Navigate 
@@ -17328,7 +17337,7 @@ namespace Admin\Facades {
                         return \Admin\Navigate::do(...$calls);
         }
                     /**
-         * 
+         * Get the current navigator instance.
          *
          * @return \Admin\Navigate 
          * @static 
@@ -17338,7 +17347,7 @@ namespace Admin\Facades {
                         return $instance->instance();
         }
                     /**
-         * 
+         * Add a title to the menu.
          *
          * @param string $title
          * @return \Admin\Navigate 
@@ -17349,7 +17358,7 @@ namespace Admin\Facades {
                         return $instance->menu_header($title);
         }
                     /**
-         * 
+         * Add a template that will be displayed in the navigation which is in the header.
          *
          * @param string $view
          * @param array $params
@@ -17362,7 +17371,7 @@ namespace Admin\Facades {
                         return $instance->nav_bar_view($view, $params, $prepend);
         }
                     /**
-         * 
+         * Add a Vue component that will be displayed in the navigation which is in the header.
          *
          * @param string $class
          * @param array $params
@@ -17375,7 +17384,7 @@ namespace Admin\Facades {
                         return $instance->nav_bar_vue($class, $params, $prepend);
         }
                     /**
-         * 
+         * Add a template that will be displayed in the left navigation which is in the header.
          *
          * @param string $view
          * @param array $params
@@ -17387,7 +17396,7 @@ namespace Admin\Facades {
                         return $instance->left_nav_bar_view($view, $params);
         }
                     /**
-         * 
+         * Add a Vue component that will be displayed in the left navigation which is in the header.
          *
          * @param string $class
          * @param array $params
@@ -17399,7 +17408,7 @@ namespace Admin\Facades {
                         return $instance->left_nav_bar_vue($class, $params);
         }
                     /**
-         * 
+         * Create a group of menu items.
          *
          * @param string|null $title
          * @param string|null|\Closure|array $route
@@ -17412,7 +17421,7 @@ namespace Admin\Facades {
                         return $instance->group($title, $route, $cb);
         }
                     /**
-         * 
+         * Add a menu item.
          *
          * @param string|null $title
          * @param string|null $route
@@ -17425,7 +17434,7 @@ namespace Admin\Facades {
                         return $instance->item($title, $route, $action);
         }
                     /**
-         * 
+         * Get all the menu items that exist.
          *
          * @return array 
          * @static 
@@ -17435,20 +17444,20 @@ namespace Admin\Facades {
                         return $instance->get();
         }
                     /**
-         * 
+         * Get all the menu items in their raw form as they are stored.
          *
          * @return array 
          * @static 
-         */        public static function getMaked()
+         */        public static function getRawItems()
         {
                         /** @var \Admin\Navigate $instance */
-                        return $instance->getMaked();
+                        return $instance->getRawItems();
         }
                     /**
          * Register a channel authenticator.
          *
          * @param string $channel
-         * @param callable|string $callback
+         * @param callable|string|array $callback
          * @param array $options
          * @return \Admin\Navigate 
          * @static 

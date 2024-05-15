@@ -99,6 +99,7 @@
         <toc-element topic="Explanation-php.md"/>
         <toc-element topic="ExtendProvider-php.md"/>
         <toc-element topic="Navigate-php.md"/>
+        <toc-element topic="Page-php.md"/>
     </toc-element>
     <toc-element topic="Tests.md"/>
 </instance-profile>
