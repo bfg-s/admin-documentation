@@ -57,13 +57,8 @@ return [
     ],
 
     /**
-     * Default actions.
+     * Admin panel force 2fa secure.
      */
-    'action' => [
-        'dashboard' => [DashboardController::class, 'index'],
-        'uploader' => [UploadController::class, 'index'],
-    ],
-
     'force-2fa' => false,
 
     /**

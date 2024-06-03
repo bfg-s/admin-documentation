@@ -5,12 +5,18 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [6.3.0](https://github.com/bfg-s/admin/compare/6.2.3...6.3.0) - 2024-05-13
-* Added realtime for components (in future)
+
+* Added realtime for components
 * Added types for all properties and methods.
 * Added commentaries for all properties, methods and classes.
+* Added code refactor.
+* Added browser list to user profile.
 * Changed installation command for generate classes with types and commentaries.
+* Changed rating stars in model table decoration.
 * Removed unused files.
-
+* Fixed extension manager edit package.
+* Fixed refresh modal button size.
+* Fixed user profile activity.
 
 ## [6.2.3](https://github.com/bfg-s/admin/compare/6.2.2...6.2.3) - 2024-05-13
 

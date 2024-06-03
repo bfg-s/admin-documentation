@@ -46,3 +46,9 @@ This function allows you to attach a `tooltip` to the component. This tooltip, a
 ```php
 $component->setTitle(string $title): static
 ```
+
+### withoutRealtime
+This method is used to disable the real-time update of the component. By default, the component is set to update in real-time, but this function allows for the deactivation of this feature.
+```php
+$component->withoutRealtime(): static
+```

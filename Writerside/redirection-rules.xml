@@ -10,4 +10,174 @@
         <description>Created after removal of "bootstrap.php" from BFG Admin Documentation</description>
         <accepts>bootstrap-php.html</accepts>
     </rule>
+    <rule id="7df2cf9b">
+        <description>Created after removal of "AdminExtensionTrait.php" from BFG Admin Documentation</description>
+        <accepts>AdminExtensionTrait-php.html</accepts>
+    </rule>
+    <rule id="4323b397">
+        <description>Created after removal of "BaseCommand" from BFG Admin Documentation</description>
+        <accepts>BaseCommand.html</accepts>
+    </rule>
+    <rule id="77582f3c">
+        <description>Created after removal of
+            "/Users/xsaven/PhpstormProjects/bfg-admin-6-2/bfg/admin/src/Commands/Generators/MacroableHelperGenerator.php"
+            from BFG Admin Documentation
+        </description>
+        <accepts>
+            Users-xsaven-PhpstormProjects-bfg-admin-6-2-bfg-admin-src-Commands-Generators-MacroableHelperGenerator-php.html
+        </accepts>
+    </rule>
+    <rule id="f0fee6c">
+        <description>Created after removal of "Admin.php" from BFG Admin Documentation</description>
+        <accepts>Admin-php.html</accepts>
+    </rule>
+    <rule id="198e9949">
+        <description>Created after removal of "ApplicationConfig.php" from BFG Admin Documentation</description>
+        <accepts>ApplicationConfig-php.html</accepts>
+    </rule>
+    <rule id="2b199a42">
+        <description>Created after removal of "ApplicationServiceProvider.php" from BFG Admin Documentation
+        </description>
+        <accepts>ApplicationServiceProvider-php.html</accepts>
+    </rule>
+    <rule id="873a6ca">
+        <description>Created after removal of "Boot.php" from BFG Admin Documentation</description>
+        <accepts>Boot-php.html</accepts>
+    </rule>
+    <rule id="210375fe">
+        <description>Created after removal of "Explanation.php" from BFG Admin Documentation</description>
+        <accepts>Explanation-php.html</accepts>
+    </rule>
+    <rule id="d194047">
+        <description>Created after removal of "ExtendProvider.php" from BFG Admin Documentation</description>
+        <accepts>ExtendProvider-php.html</accepts>
+    </rule>
+    <rule id="7eef601d">
+        <description>Created after removal of "Navigate.php" from BFG Admin Documentation</description>
+        <accepts>Navigate-php.html</accepts>
+    </rule>
+    <rule id="1bca9a68">
+        <description>Created after removal of "Page.php" from BFG Admin Documentation</description>
+        <accepts>Page-php.html</accepts>
+    </rule>
+    <rule id="5b2ec21d">
+        <description>Created after removal of "Respond.php" from BFG Admin Documentation</description>
+        <accepts>Respond-php.html</accepts>
+    </rule>
+    <rule id="1eeb4da4">
+        <description>Created after removal of "ServiceProvider.php" from BFG Admin Documentation</description>
+        <accepts>ServiceProvider-php.html</accepts>
+    </rule>
+    <rule id="642a7458">
+        <description>Created after removal of "AlpineStoreBladeDirective.php" from BFG Admin Documentation</description>
+        <accepts>AlpineStoreBladeDirective-php.html</accepts>
+    </rule>
+    <rule id="2363a5de">
+        <description>Created after removal of "AttributesBladeDirective.php" from BFG Admin Documentation</description>
+        <accepts>AttributesBladeDirective-php.html</accepts>
+    </rule>
+    <rule id="4bf3e3e6">
+        <description>Created after removal of "SystemCssBladeDirective.php" from BFG Admin Documentation</description>
+        <accepts>SystemCssBladeDirective-php.html</accepts>
+    </rule>
+    <rule id="6aadd9ae">
+        <description>Created after removal of "SystemJsBladeDirective.php" from BFG Admin Documentation</description>
+        <accepts>SystemJsBladeDirective-php.html</accepts>
+    </rule>
+    <rule id="5293e6a1">
+        <description>Created after removal of "SystemJsVariablesBladeDirective.php" from BFG Admin Documentation
+        </description>
+        <accepts>SystemJsVariablesBladeDirective-php.html</accepts>
+    </rule>
+    <rule id="36d013c">
+        <description>Created after removal of "SystemMetasBladeDirective.php" from BFG Admin Documentation</description>
+        <accepts>SystemMetasBladeDirective-php.html</accepts>
+    </rule>
+    <rule id="a55839d">
+        <description>Created after removal of "SystemScriptsBladeDirective.php" from BFG Admin Documentation
+        </description>
+        <accepts>SystemScriptsBladeDirective-php.html</accepts>
+    </rule>
+    <rule id="753aaa39">
+        <description>Created after removal of "SystemStylesBladeDirective.php" from BFG Admin Documentation
+        </description>
+        <accepts>SystemStylesBladeDirective-php.html</accepts>
+    </rule>
+    <rule id="4d06129c">
+        <description>Created after removal of "UpdateWithPjaxBladeDirective.php" from BFG Admin Documentation
+        </description>
+        <accepts>UpdateWithPjaxBladeDirective-php.html</accepts>
+    </rule>
+    <rule id="338d8743">
+        <description>Created after removal of "Generators" from BFG Admin Documentation</description>
+        <accepts>Generators.html</accepts>
+    </rule>
+    <rule id="4aa535c5">
+        <description>Created after removal of "ExtensionNavigatorHelperGenerator.php" from BFG Admin Documentation
+        </description>
+        <accepts>ExtensionNavigatorHelperGenerator-php.html</accepts>
+    </rule>
+    <rule id="30095d67">
+        <description>Created after removal of "ExtensionNavigatorMethodsHelperGenerator.php" from BFG Admin
+            Documentation
+        </description>
+        <accepts>ExtensionNavigatorMethodsHelperGenerator-php.html</accepts>
+    </rule>
+    <rule id="68713f6f">
+        <description>Created after removal of "GenerateAdminHelper.php" from BFG Admin Documentation</description>
+        <accepts>GenerateAdminHelper-php.html</accepts>
+    </rule>
+    <rule id="fc2086a">
+        <description>Created after removal of "MacroableHelperGenerator.php" from BFG Admin Documentation</description>
+        <accepts>MacroableHelperGenerator-php.html</accepts>
+    </rule>
+    <rule id="32b2cf49">
+        <description>Created after removal of "MacroDelegatorsHelperGenerator.php" from BFG Admin Documentation
+        </description>
+        <accepts>MacroDelegatorsHelperGenerator-php.html</accepts>
+    </rule>
+    <rule id="5ab3ca3f">
+        <description>Created after removal of "AdminControllerCommand.php" from BFG Admin Documentation</description>
+        <accepts>AdminControllerCommand-php.html</accepts>
+    </rule>
+    <rule id="3df5f807">
+        <description>Created after removal of "AdminExtensionCommand.php" from BFG Admin Documentation</description>
+        <accepts>AdminExtensionCommand-php.html</accepts>
+    </rule>
+    <rule id="13630575">
+        <description>Created after removal of "AdminHelpersCommand.php" from BFG Admin Documentation</description>
+        <accepts>AdminHelpersCommand-php.html</accepts>
+    </rule>
+    <rule id="7a0a085d">
+        <description>Created after removal of "AdminInstallCommand.php" from BFG Admin Documentation</description>
+        <accepts>AdminInstallCommand-php.html</accepts>
+    </rule>
+    <rule id="37f13eb1">
+        <description>Created after removal of "AdminUserCommand.php" from BFG Admin Documentation</description>
+        <accepts>AdminUserCommand-php.html</accepts>
+    </rule>
+    <rule id="7f83522c">
+        <description>Created after removal of "ConfigExtensionProvider.php" from BFG Admin Documentation</description>
+        <accepts>ConfigExtensionProvider-php.html</accepts>
+    </rule>
+    <rule id="2f9750a0">
+        <description>Created after removal of "BladeDirectives" from BFG Admin Documentation</description>
+        <accepts>BladeDirectives.html</accepts>
+    </rule>
+    <rule id="1a5c9a28">
+        <description>Created after removal of "Commands" from BFG Admin Documentation</description>
+        <accepts>Commands-directory.html</accepts>
+    </rule>
+    <rule id="8431db8">
+        <description>Created after removal of "Components" from BFG Admin Documentation</description>
+        <accepts>Components.html</accepts>
+    </rule>
+    <rule id="3b2f332f">
+        <description>Created after removal of "Core" from BFG Admin Documentation</description>
+        <accepts>Core.html</accepts>
+    </rule>
+    <rule id="26b9e5b9">
+        <description>Created after removal of "Api documentation" from BFG Admin Documentation</description>
+        <accepts>Api-documentation.html</accepts>
+    </rule>
 </rules>

@@ -28,3 +28,36 @@ This command deploys all required migrations and admin files to your Laravel app
 
 
 By following these steps, you will successfully integrate the Bfg Admin panel into your Laravel project, allowing you to utilize its comprehensive features for efficient application administration and management.
+
+## Step 4: Create a Controller
+To create a new controller for your model, use the following command:
+```bash
+php artisan admin:controller UsersController --model=User
+```
+This command generates a new controller named `UsersController` that is linked to the `User` model, providing you with a ready-to-use controller for managing user data in your application.
+
+## Step 5: Add Controller to Navigation
+To display the newly created controller in the admin panel navigation, add it to the `app/Admin/Navigator.php` file under the `handle` section. This step ensures that the controller is accessible from the admin panel interface, allowing you to manage the associated model data efficiently.
+```php
+use App\Admin\Controllers\UsersController;
+...
+    public function handle() : void
+    {
+        ...
+        
+        $this->item('Users')
+            ->resource('users', UsersController::class)
+            ->icon_users();
+            
+        ...    
+    }
+...
+```
+
+## Step 6: Access the Admin Panel
+If your server is not already running, use the following command to start Laravel's built-in server:
+```Bash
+php artisan serve
+```
+Open your browser and go to the URL that Laravel gives you (usually [http://127.0.0.1:8000/bfg](http://127.0.0.1:8000/bfg)) to log into the admin panel using the credentials of the user you created.
+Enter standard user `admin`:`admin`
