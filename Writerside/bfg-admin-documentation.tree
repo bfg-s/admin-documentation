@@ -78,6 +78,7 @@
         <toc-element topic="Component-extending.md"/>
         <toc-element topic="Register-new-form-component.md"/>
         <toc-element topic="Model-table-extending.md"/>
+        <toc-element topic="Register-new-dashboard-widget.md"/>
     </toc-element>
     <toc-element topic="Helpers.md"/>
     <toc-element topic="IDE-Helpers.md"/>

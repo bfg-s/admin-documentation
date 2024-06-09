@@ -4,7 +4,7 @@ To extend a table component and add a column modifier, you can follow these step
 
 1. Create a new class that extends the `ModelTableExtension` class.
 1. Implement the desired methods in your extension class, each of which will serve as a table extender.
-1. Add your extension class to the list of extendable component classes in the `boot` method of the `Config` class.
+1. Add your extension class to the list of extendable component classes in the `boot` method of the `App\\Admin\\Config` class.
 
 Here's an example of how you can do this:
 ```php

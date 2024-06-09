@@ -36,8 +36,7 @@ class DashboardController extends Controller
                 ),
             ),
             $row->column(4)->row(
-                $row->addClass('h-100'),
-                $row->column(12, $column->addClass('d-flex'))->card(
+                $row->column(12)->card(
                     $card->title('Administrators browser statistic'),
                     $card->card_body(
                         $cardBody->chart_js(
@@ -53,7 +52,7 @@ class DashboardController extends Controller
                         )
                     ),
                 ),
-                $row->column(12, $column->addClass('d-flex'))->card(
+                $row->column(12)->card(
                     $card->title('Activity'),
                     $card->card_body(
                         $cardBody->chart_js(
