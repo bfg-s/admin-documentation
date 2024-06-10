@@ -39,31 +39,31 @@ The following enumerates all available input options that can be integrated.
 The form facilitates mass methods, which are individually accessible for all inputs as well.
 
 
-### Vertical mode
+### Vertical form mode
 This setting adjusts the layout of the group title to be displayed vertically instead of horizontally.
 ```php
 $form->vertical()
 ```
 
-### Horizontal mode
+### Horizontal form mode
 This setting adjusts the layout of the group title to be displayed horizontally instead of vertically.
 ```php
 $form->horizontal()
 ```
 
-### Reversed
+### Reversed form
 This setting flips the orientation of the group title.
 ```php
 $form->reversed()
 ```
 
-### Set label width
+### Set form label width
 This setting determines the number of columns in the header when the group is displayed horizontally.
 ```php
 $form->label_width(int $width)
 ```
 
-### Input field abstraction
+## Input field abstraction
 This abstraction class is the main class from which all inputs are inherited.
 All methods that this abstract class supports are the same for all other inputs.
 
