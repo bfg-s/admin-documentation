@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "321337839218dc0df899407b164c03f5",
+    "content-hash": "2ff0e3345399be3f382575fac85fcb9b",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -255,12 +255,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bfg-s/admin.git",
-                "reference": "aaf1b75d9941dd58331e4163a21d129b0e9ed199"
+                "reference": "54215ef29af85e5371161934f033a4f899334037"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bfg-s/admin/zipball/aaf1b75d9941dd58331e4163a21d129b0e9ed199",
-                "reference": "aaf1b75d9941dd58331e4163a21d129b0e9ed199",
+                "url": "https://api.github.com/repos/bfg-s/admin/zipball/54215ef29af85e5371161934f033a4f899334037",
+                "reference": "54215ef29af85e5371161934f033a4f899334037",
                 "shasum": ""
             },
             "require": {
@@ -329,7 +329,7 @@
                 "issues": "https://github.com/bfg-s/admin/issues",
                 "source": "https://github.com/bfg-s/admin/tree/6.4.0"
             },
-            "time": "2024-06-09T12:49:37+00:00"
+            "time": "2024-06-09T14:36:28+00:00"
         },
         {
             "name": "bfg/admin-address",
@@ -1280,6 +1280,61 @@
                 "source": "https://github.com/bfg-s/repository/tree/1.4.0"
             },
             "time": "2024-04-29T10:52:23+00:00"
+        },
+        {
+            "name": "bfg/resource",
+            "version": "3.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bfg-s/resource.git",
+                "reference": "472b7502ae77410e04bc1e926debe0950d1b3593"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bfg-s/resource/zipball/472b7502ae77410e04bc1e926debe0950d1b3593",
+                "reference": "472b7502ae77410e04bc1e926debe0950d1b3593",
+                "shasum": ""
+            },
+            "require": {
+                "bfg/embedded-call": "*",
+                "php": ">=8.0.0"
+            },
+            "type": "bfg-app",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Bfg\\Resource\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Bfg\\Resource\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "bfg"
+                }
+            ],
+            "description": "A small addition to the resources to the Laravel",
+            "keywords": [
+                "extension",
+                "laravel",
+                "resource"
+            ],
+            "support": {
+                "issues": "https://github.com/bfg-s/resource/issues",
+                "source": "https://github.com/bfg-s/resource/tree/3.1.5"
+            },
+            "time": "2024-02-22T14:57:16+00:00"
         },
         {
             "name": "bfg/text",

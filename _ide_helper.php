@@ -17198,6 +17198,50 @@ namespace Admin\Facades {
      * @mixin AdminEngine
      */        class Admin {
                     /**
+         * Check if the admin panel is in API mode.
+         *
+         * @return bool 
+         * @static 
+         */        public static function isApiMode()
+        {
+                        /** @var \Admin\AdminEngine $instance */
+                        return $instance->isApiMode();
+        }
+                    /**
+         * Method for adding a important content to the response.
+         *
+         * @param string $name
+         * @param mixed $content
+         * @param string|null $resource
+         * @return void 
+         * @static 
+         */        public static function important($name, $content, $resource = null)
+        {
+                        /** @var \Admin\AdminEngine $instance */
+                        $instance->important($name, $content, $resource);
+        }
+                    /**
+         * Method for adding expected query parameter.
+         *
+         * @param string $name
+         * @return void 
+         * @static 
+         */        public static function expectedQuery($name)
+        {
+                        /** @var \Admin\AdminEngine $instance */
+                        $instance->expectedQuery($name);
+        }
+                    /**
+         * Get admin languages.
+         *
+         * @return array 
+         * @static 
+         */        public static function getLangs()
+        {
+                        /** @var \Admin\AdminEngine $instance */
+                        return $instance->getLangs();
+        }
+                    /**
          * Method for adding a theme to the admin panel.
          *
          * @param string $class

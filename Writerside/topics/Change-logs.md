@@ -4,11 +4,22 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [6.4.0](https://github.com/bfg-s/admin/compare/6.3.0...6.4.0) - 2024-06-09
+## [6.4.0](https://github.com/bfg-s/admin/compare/6.3.0...6.4.0) - 2024-07-02
 * Added creation of interactive dashboards with the ability to personalize for different users.
 * Added modal use method for deferred loading.
 * Fixed checkboxes in realtime model table.
 * Removed all "addClass" methods from the components.
+* Added REST API for the admin panel.
+* Fixed uk translation for login page.
+* Added tabs component refactor.
+* Added REST API for the admin panel.
+* Added tests for the REST API.
+* Added tests for the admin panel.
+* Added loadeble component, a component that accepts a function and loads the returned content after the page has loaded.
+* Added update manager.
+* Added change event for the component.
+* Added private note widget for the dashboard.
+* Added sort by relations in orderBy for select2. 
 
 ## [6.3.0](https://github.com/bfg-s/admin/compare/6.2.3...6.3.0) - 2024-06-03
 
