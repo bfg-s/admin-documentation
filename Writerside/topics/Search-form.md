@@ -58,6 +58,9 @@ When a property or method starts with `in_[input method]_*`, a magical addition 
 - `%=` - Search starts with input value
 - `=%` - The search term ends with the input value
 - `%=%` - Search may contain an input value
+- `%json` - Search starts with input value (in json column)
+- `json%` - The search term ends with the input value (in json column)
+- `%json%` - Search may contain an input value (in json column)
 - `null` - Lookup must be `null`
 - `not_null` - Search must not be `null`
 - `in` - Search must contain one of the options
