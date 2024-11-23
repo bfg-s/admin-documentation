@@ -31,6 +31,7 @@ These Laravel packages are necessary for the admin panel's operation, offering v
 The admin panel leverages a variety of frontend libraries and frameworks to ensure a rich and interactive user experience. Below is a list of these required frontend assets, complete with links for more information or documentation:
 
 - **[AdminLte v3](https://adminlte.io/themes/v3/):** The core UI framework for creating a responsive admin dashboard.
+- **[Flowbite Admin Dashboard](https://github.com/themesberg/flowbite-admin-dashboard):** This project is a free and open-source UI admin dashboard template built with the components from Flowbite and based on the utility-first Tailwind CSS framework featuring charts, tables, widgets, CRUD layouts, modals, drawers, and more.
 - **[Bootstrap v4.3.1](https://getbootstrap.com/):** A popular framework for developing responsive, mobile-first websites.
 - **[Bootstrap Iconpicker v1.10.0](http://victor-valencia.github.io/bootstrap-iconpicker/):** A plugin to pick icons from Bootstrap-friendly icon fonts.
 - **[Bootstrap Colorpicker](https://github.com/itsjavi/bootstrap-colorpicker):** A plugin allowing color selection.

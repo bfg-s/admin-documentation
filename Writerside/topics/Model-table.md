@@ -63,6 +63,13 @@ To facilitate data organization and enhance user interaction, you can enable sor
 $modelTable->sort(string field = null)
 ```
 
+### to_total
+Adds a column to the total count and outputs it to the bottom row of the table.
+```php
+$modelTable->to_total(string|callable $field = null)
+```
+You can set custom field names for the total row by passing a string or a callback function that returns a number for calculation.
+
 ### to_hide
 To enhance user experience, you can temporarily hide a column in the table, making it hidden from view while still retaining the option to display it as needed. This feature provides flexibility in managing the visibility of columns based on user preferences or specific requirements.
 ```php
